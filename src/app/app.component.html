@@ -22,6 +22,7 @@
 <form>
   <label> Product name: </label><input type="text" id="productInput" [(ngModel)]="productAdded" name="proAdd"/>
   <button class="button" id="addProduct" (click)="addProduct($event)" >Add Product</button>
+  {{profile | json}}
   <br/><br/>
   <label> Get product: </label> <input type="text" />
   <button class="button" id="getProduct" (click)="getProduct($event)">Get Product</button>
