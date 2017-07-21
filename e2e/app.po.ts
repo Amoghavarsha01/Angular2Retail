@@ -1,6 +1,7 @@
 import { browser, by, element } from 'protractor';
 
 export class RetailAngular2Page {
+
   navigateTo() {
     return browser.get('/');
   }

@@ -1,3 +1,4 @@
+
 import { RetailAngular2Page } from './app.po';
 
 describe('retail-angular2 App', () => {
