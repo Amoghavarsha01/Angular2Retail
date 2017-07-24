@@ -10,12 +10,12 @@ import { UserService } from './app.service';
 export class AppComponent {
   constructor(private userService: UserService) {}
   title = 'Amoghavarsha angular app';
-  profile = {};
+  profile = [];
   @Input() productAdded : string;
   addProduct(event){
     //alert("Added product " + this.productAdded);
     console.log("Entered addProduct");
-    this.userService.addProduct().subscribe(data => this.profile = data);
+    this.userService.addProduct().subscribe(data =>this.profile = data);
 
   }
   getProduct(event){

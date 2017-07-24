@@ -17,6 +17,7 @@ export class AddProductService {
 
 import { Http, Response , Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Product} from './app.Product'
 
 @Injectable()
 export class UserService {
@@ -31,8 +32,7 @@ export class UserService {
      let options = new RequestOptions({ headers: headers1 });
      console.log(options);
     return this.http.get(`http://localhost:8093/addProduct/app/productAdd` )
-    .map((res:Response) => res);
+    .map((res:Response) => <Product[]>res.json());
     
   }
-
 }
